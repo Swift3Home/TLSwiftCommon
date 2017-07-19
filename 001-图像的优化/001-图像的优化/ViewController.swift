@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    // 如何设置圆角，不要用圆角半径
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -20,9 +21,14 @@ class ViewController: UIViewController {
         
         view.addSubview(iv)
         
-//        iv.image = #imageLiteral(resourceName: "avatar_default_big.png")
-        let image = #imageLiteral(resourceName: "avatar_default_big.png")
-        iv.image = avatarImage(image: image, size: rect.size, backColor: view.backgroundColor)
+        // 设置图像
+        // - PNG 图片是支持透明的
+        // - JPG 图片不支持透明
+//        let image = #imageLiteral(resourceName: "avatar_default_big.png")
+//        iv.image = avatarImage(image: image, size: rect.size, backColor: view.backgroundColor)
+        
+        let image = UIImage(named: "shali.jpg")//#imageLiteral(resourceName: "shali.jpg")
+        iv.image = avatarImage(image: image!, size: rect.size, backColor: view.backgroundColor)
     }
 
     override func didReceiveMemoryWarning() {
