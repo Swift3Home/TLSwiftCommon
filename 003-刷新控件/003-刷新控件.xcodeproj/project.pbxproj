@@ -12,6 +12,7 @@
 		7E7A82171F2B096C00A4D0E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E7A82151F2B096C00A4D0E0 /* Main.storyboard */; };
 		7E7A82191F2B096C00A4D0E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E7A82181F2B096C00A4D0E0 /* Assets.xcassets */; };
 		7E7A821C1F2B096C00A4D0E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E7A821A1F2B096C00A4D0E0 /* LaunchScreen.storyboard */; };
+		7E7A82281F2B1C4D00A4D0E0 /* TLRefreshControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7A82271F2B1C4D00A4D0E0 /* TLRefreshControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		7E7A82181F2B096C00A4D0E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7E7A821B1F2B096C00A4D0E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7E7A821D1F2B096C00A4D0E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E7A82271F2B1C4D00A4D0E0 /* TLRefreshControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLRefreshControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		7E7A82101F2B096C00A4D0E0 /* 003-刷新控件 */ = {
 			isa = PBXGroup;
 			children = (
+				7E7A82261F2B1C4D00A4D0E0 /* TLRefreshControl */,
 				7E7A82111F2B096C00A4D0E0 /* AppDelegate.swift */,
 				7E7A82131F2B096C00A4D0E0 /* ViewController.swift */,
 				7E7A82151F2B096C00A4D0E0 /* Main.storyboard */,
@@ -62,6 +65,14 @@
 				7E7A821D1F2B096C00A4D0E0 /* Info.plist */,
 			);
 			path = "003-刷新控件";
+			sourceTree = "<group>";
+		};
+		7E7A82261F2B1C4D00A4D0E0 /* TLRefreshControl */ = {
+			isa = PBXGroup;
+			children = (
+				7E7A82271F2B1C4D00A4D0E0 /* TLRefreshControl.swift */,
+			);
+			path = TLRefreshControl;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E7A82281F2B1C4D00A4D0E0 /* TLRefreshControl.swift in Sources */,
 				7E7A82141F2B096C00A4D0E0 /* ViewController.swift in Sources */,
 				7E7A82121F2B096C00A4D0E0 /* AppDelegate.swift in Sources */,
 			);
@@ -304,6 +316,7 @@
 				7E7A82221F2B096C00A4D0E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    lazy var refreshControl = UIRefreshControl()
+    lazy var refreshControl: TLRefreshControl = TLRefreshControl()
     
     /**
      系统刷新控件的问题：
@@ -22,6 +22,9 @@ class ViewController: UIViewController {
      */
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // 设置 contentInset
+        tableView.contentInset = UIEdgeInsets(top: 64, left: 0, bottom: 0, right: 0)
         
         // 添加刷新控件
         tableView.addSubview(refreshControl)
