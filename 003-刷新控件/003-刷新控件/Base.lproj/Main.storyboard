@@ -83,9 +83,7 @@
                             <constraint firstAttribute="trailing" secondItem="INt-wj-MsJ" secondAttribute="trailing" id="QWI-Si-eKR"/>
                             <constraint firstItem="INt-wj-MsJ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="YHC-qv-XaH"/>
                             <constraint firstAttribute="trailing" secondItem="INt-wj-MsJ" secondAttribute="trailing" id="Yvd-1N-54B"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="INt-wj-MsJ" secondAttribute="bottom" id="gCq-p2-Uf5"/>
                             <constraint firstItem="INt-wj-MsJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="nzY-ol-xiM"/>
-                            <constraint firstItem="INt-wj-MsJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="u1j-oy-nOF"/>
                         </constraints>
                     </view>
                     <connections>
