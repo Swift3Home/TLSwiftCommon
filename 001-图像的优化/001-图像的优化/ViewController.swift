@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
     // 如何设置圆角，不要用圆角半径
     override func viewDidLoad() {
         super.viewDidLoad()
