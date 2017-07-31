@@ -13,7 +13,21 @@ import UIKit
 class TLRefreshView: UIView {
     
     /// 刷新状态
-    var refreshState: TLRefreshState = .Normal
+    var refreshState: TLRefreshState = .Normal {
+        didSet {
+            switch refreshState {
+            case .Normal:
+                tipLabel.text = "继续使劲拉..."
+                break
+            case .Pulling:
+                tipLabel.text = "放手就刷新..."
+                break
+            case .WillRefresh:
+                tipLabel.text = "正在刷新中..."
+                break
+            }
+        }
+    }
     
     /// 指示器
     @IBOutlet weak var indicator: UIActivityIndicatorView!

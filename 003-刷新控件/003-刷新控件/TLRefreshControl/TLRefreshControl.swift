@@ -101,10 +101,10 @@ class TLRefreshControl: UIControl {
         
         // 判断临界点 - 只需要判断一次
         if sv.isDragging {
-            if (height > TLRefreshOffset) && (TLRefreshState == .Normal) {
+            if (height > TLRefreshOffset) && (refreshView.refreshState == .Normal) {
                 print("放手刷新")
                 refreshView.refreshState = .Pulling
-            } else if (height <= TLRefreshOffset) && (TLRefreshState == .Pulling) {
+            } else if (height <= TLRefreshOffset) && (refreshView.refreshState == .Pulling) {
                 print("继续使劲...")
                 refreshView.refreshState = .Normal
             }
@@ -133,7 +133,7 @@ class TLRefreshControl: UIControl {
 extension TLRefreshControl {
     
     fileprivate func setupUI() {
-        backgroundColor = UIColor.cyan
+        backgroundColor = superview?.backgroundColor
         
         // 设置超出边界不显示
         clipsToBounds = true
