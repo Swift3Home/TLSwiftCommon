@@ -8,6 +8,20 @@
 
 import UIKit
 
+// 刷新状态切换的临界点
+private let TLRefreshOffset: CGFloat = 60
+
+/// 刷新状态
+///
+/// - Normal: 普通状态，什么都不做
+/// - Pulling: 超过临界点，如果放手，开始刷新
+/// - WillRefresh: 用户超过临界点，并且放手
+enum TLRefreshState {
+    case Normal
+    case Pulling
+    case WillRefresh
+}
+
 // 刷新控件 - 负责刷新相关的逻辑处理
 class TLRefreshControl: UIControl {
 
@@ -78,8 +92,21 @@ class TLRefreshControl: UIControl {
         // 初始高度是0
         let height = -(sv.contentInset.top + sv.contentOffset.y)
         
+        if height < 0 {
+            return
+        }
+        
         // 可以根据高度设置刷新控件的 frame
         self.frame = CGRect(x: 0, y: -height, width: sv.bounds.width, height: height)
+        
+        // 判断临界点 - 只需要判断一次
+        if sv.isDragging {
+            if height > TLRefreshOffset {
+                
+            } else {
+                
+            }
+        }
     }
     
     // 开始刷新

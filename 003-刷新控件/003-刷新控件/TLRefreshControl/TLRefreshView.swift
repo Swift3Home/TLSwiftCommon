@@ -11,7 +11,10 @@ import UIKit
 
 /// 刷新视图 - 负责刷新相关的 UI 显示和动画
 class TLRefreshView: UIView {
-
+    
+    /// 刷新状态
+    var refreshState: TLRefreshState = .Normal
+    
     /// 指示器
     @IBOutlet weak var indicator: UIActivityIndicatorView!
     /// 提示图标
