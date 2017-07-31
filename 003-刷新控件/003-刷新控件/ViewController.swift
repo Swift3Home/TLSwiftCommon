@@ -41,7 +41,7 @@ class ViewController: UIViewController {
         print("开始刷新")
         refreshControl.beginRefreshing()
         
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()) { 
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
             
             print("结束刷新")
             

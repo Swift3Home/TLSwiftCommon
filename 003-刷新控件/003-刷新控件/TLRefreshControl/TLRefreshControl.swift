@@ -113,14 +113,15 @@ class TLRefreshControl: UIControl {
                 print("准备开始刷新")
                 
                 beginRefreshing()
+                
+                // 发送刷新数据事件
+                sendActions(for: .valueChanged)
             }
         }
     }
     
     // 开始刷新
     func beginRefreshing() {
-        print("开始刷新")
-        
         // 判断父视图
         guard let sv = scrollView else {
             return
@@ -143,7 +144,22 @@ class TLRefreshControl: UIControl {
     
     // 结束刷新
     func endRefreshing() {
-        print("结束刷新")
+        guard let sv = scrollView else {
+            return
+        }
+        
+        // 判断状态，是否正在刷新，如果不是，直接返回
+        if refreshView.refreshState != .WillRefresh {
+            return
+        }
+        
+        // 恢复刷新视图的状态
+        refreshView.refreshState = .Normal
+        
+        // 恢复表格视图的 contentInset
+        var inset = sv.contentInset
+        inset.top -= TLRefreshOffset
+        sv.contentInset = inset
     }
     
 }
