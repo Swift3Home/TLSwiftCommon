@@ -101,10 +101,18 @@ class TLRefreshControl: UIControl {
         
         // 判断临界点 - 只需要判断一次
         if sv.isDragging {
-            if height > TLRefreshOffset {
-                
-            } else {
-                
+            if (height > TLRefreshOffset) && (TLRefreshState == .Normal) {
+                print("放手刷新")
+                refreshView.refreshState = .Pulling
+            } else if (height <= TLRefreshOffset) && (TLRefreshState == .Pulling) {
+                print("继续使劲...")
+                refreshView.refreshState = .Normal
+            }
+        } else { // 放手 - 是否超过临界点
+            if refreshView.refreshState == .Pulling {
+                print("准备开始刷新")
+                // 刷新结束之后，将状态修改为 .Normal 才能继续相应刷新
+                refreshView.refreshState = .WillRefresh
             }
         }
     }
