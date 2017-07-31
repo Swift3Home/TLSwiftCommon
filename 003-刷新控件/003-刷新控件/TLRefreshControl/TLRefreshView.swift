@@ -19,4 +19,10 @@ class TLRefreshView: UIView {
     /// 提示标签
     @IBOutlet weak var tipLabel: UILabel!
 
+    class func refreshView() -> TLRefreshView {
+        
+        let nib = UINib(nibName: "TLRefreshView", bundle: nil)
+        
+        return nib.instantiate(withOwner: nil, options: nil)[0] as! TLRefreshView
+    }
 }
