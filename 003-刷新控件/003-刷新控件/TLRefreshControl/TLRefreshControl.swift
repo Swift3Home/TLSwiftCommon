@@ -8,7 +8,7 @@
 
 import UIKit
 
-// 刷新控件
+// 刷新控件 - 负责刷新相关的逻辑处理
 class TLRefreshControl: UIControl {
 
     // MARK: - 属性

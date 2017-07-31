@@ -13,6 +13,8 @@
 		7E7A82191F2B096C00A4D0E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E7A82181F2B096C00A4D0E0 /* Assets.xcassets */; };
 		7E7A821C1F2B096C00A4D0E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E7A821A1F2B096C00A4D0E0 /* LaunchScreen.storyboard */; };
 		7E7A82281F2B1C4D00A4D0E0 /* TLRefreshControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7A82271F2B1C4D00A4D0E0 /* TLRefreshControl.swift */; };
+		7E7A822A1F2F0B0700A4D0E0 /* TLRefreshView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E7A82291F2F0B0700A4D0E0 /* TLRefreshView.xib */; };
+		7E7A822C1F2F10AE00A4D0E0 /* TLRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7A822B1F2F10AE00A4D0E0 /* TLRefreshView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		7E7A821B1F2B096C00A4D0E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7E7A821D1F2B096C00A4D0E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E7A82271F2B1C4D00A4D0E0 /* TLRefreshControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLRefreshControl.swift; sourceTree = "<group>"; };
+		7E7A82291F2F0B0700A4D0E0 /* TLRefreshView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TLRefreshView.xib; sourceTree = "<group>"; };
+		7E7A822B1F2F10AE00A4D0E0 /* TLRefreshView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLRefreshView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,8 @@
 			isa = PBXGroup;
 			children = (
 				7E7A82271F2B1C4D00A4D0E0 /* TLRefreshControl.swift */,
+				7E7A82291F2F0B0700A4D0E0 /* TLRefreshView.xib */,
+				7E7A822B1F2F10AE00A4D0E0 /* TLRefreshView.swift */,
 			);
 			path = TLRefreshControl;
 			sourceTree = "<group>";
@@ -135,6 +141,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E7A822A1F2F0B0700A4D0E0 /* TLRefreshView.xib in Resources */,
 				7E7A821C1F2B096C00A4D0E0 /* LaunchScreen.storyboard in Resources */,
 				7E7A82191F2B096C00A4D0E0 /* Assets.xcassets in Resources */,
 				7E7A82171F2B096C00A4D0E0 /* Main.storyboard in Resources */,
@@ -148,6 +155,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E7A822C1F2F10AE00A4D0E0 /* TLRefreshView.swift in Sources */,
 				7E7A82281F2B1C4D00A4D0E0 /* TLRefreshControl.swift in Sources */,
 				7E7A82141F2B096C00A4D0E0 /* ViewController.swift in Sources */,
 				7E7A82121F2B096C00A4D0E0 /* AppDelegate.swift in Sources */,
