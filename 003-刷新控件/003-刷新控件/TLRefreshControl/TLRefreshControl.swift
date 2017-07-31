@@ -113,6 +113,13 @@ class TLRefreshControl: UIControl {
                 print("准备开始刷新")
                 // 刷新结束之后，将状态修改为 .Normal 才能继续相应刷新
                 refreshView.refreshState = .WillRefresh
+                
+                // 让整个刷新视图能够显示出来
+                // 解决方法：修改表格的contenInset
+                var inset = sv.contentInset
+                inset.top += TLRefreshOffset
+                
+                sv.contentInset = inset
             }
         }
     }
@@ -136,7 +143,7 @@ extension TLRefreshControl {
         backgroundColor = superview?.backgroundColor
         
         // 设置超出边界不显示
-        clipsToBounds = true
+//        clipsToBounds = true
         
         // 添加刷新视图 - 从 xib 加载出来，默认是 xib 中指定的宽高
         addSubview(refreshView)
