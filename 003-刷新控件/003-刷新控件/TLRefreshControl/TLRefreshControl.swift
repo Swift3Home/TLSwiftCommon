@@ -111,15 +111,8 @@ class TLRefreshControl: UIControl {
         } else { // 放手 - 是否超过临界点
             if refreshView.refreshState == .Pulling {
                 print("准备开始刷新")
-                // 刷新结束之后，将状态修改为 .Normal 才能继续相应刷新
-                refreshView.refreshState = .WillRefresh
                 
-                // 让整个刷新视图能够显示出来
-                // 解决方法：修改表格的contenInset
-                var inset = sv.contentInset
-                inset.top += TLRefreshOffset
-                
-                sv.contentInset = inset
+                beginRefreshing()
             }
         }
     }
@@ -127,6 +120,25 @@ class TLRefreshControl: UIControl {
     // 开始刷新
     func beginRefreshing() {
         print("开始刷新")
+        
+        // 判断父视图
+        guard let sv = scrollView else {
+            return
+        }
+        
+        // 判断是否正在刷新，如果正在刷新，直接返回
+        if refreshView.refreshState == .WillRefresh {
+            return
+        }
+        
+        // 设置刷新视图的状态
+        refreshView.refreshState = .WillRefresh
+        
+        // 调整表格的间距
+        var inset = sv.contentInset
+        inset.top += TLRefreshOffset
+        
+        sv.contentInset = inset
     }
     
     // 结束刷新
