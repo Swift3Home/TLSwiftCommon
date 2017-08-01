@@ -15,6 +15,7 @@
 		7E7A82281F2B1C4D00A4D0E0 /* TLRefreshControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7A82271F2B1C4D00A4D0E0 /* TLRefreshControl.swift */; };
 		7E7A822A1F2F0B0700A4D0E0 /* TLRefreshView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E7A82291F2F0B0700A4D0E0 /* TLRefreshView.xib */; };
 		7E7A822C1F2F10AE00A4D0E0 /* TLRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7A822B1F2F10AE00A4D0E0 /* TLRefreshView.swift */; };
+		7E7A82361F301D6900A4D0E0 /* TLHumanRefreshView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E7A82351F301D6900A4D0E0 /* TLHumanRefreshView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		7E7A82271F2B1C4D00A4D0E0 /* TLRefreshControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLRefreshControl.swift; sourceTree = "<group>"; };
 		7E7A82291F2F0B0700A4D0E0 /* TLRefreshView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TLRefreshView.xib; sourceTree = "<group>"; };
 		7E7A822B1F2F10AE00A4D0E0 /* TLRefreshView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLRefreshView.swift; sourceTree = "<group>"; };
+		7E7A82351F301D6900A4D0E0 /* TLHumanRefreshView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TLHumanRefreshView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				7E7A82271F2B1C4D00A4D0E0 /* TLRefreshControl.swift */,
 				7E7A82291F2F0B0700A4D0E0 /* TLRefreshView.xib */,
 				7E7A822B1F2F10AE00A4D0E0 /* TLRefreshView.swift */,
+				7E7A82351F301D6900A4D0E0 /* TLHumanRefreshView.xib */,
 			);
 			path = TLRefreshControl;
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E7A822A1F2F0B0700A4D0E0 /* TLRefreshView.xib in Resources */,
+				7E7A82361F301D6900A4D0E0 /* TLHumanRefreshView.xib in Resources */,
 				7E7A821C1F2B096C00A4D0E0 /* LaunchScreen.storyboard in Resources */,
 				7E7A82191F2B096C00A4D0E0 /* Assets.xcassets in Resources */,
 				7E7A82171F2B096C00A4D0E0 /* Main.storyboard in Resources */,

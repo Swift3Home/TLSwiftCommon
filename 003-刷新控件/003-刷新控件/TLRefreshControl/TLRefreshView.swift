@@ -61,7 +61,7 @@ class TLRefreshView: UIView {
 
     class func refreshView() -> TLRefreshView {
         
-        let nib = UINib(nibName: "TLRefreshView", bundle: nil)
+        let nib = UINib(nibName: "TLHumanRefreshView", bundle: nil)
         
         return nib.instantiate(withOwner: nil, options: nil)[0] as! TLRefreshView
     }
