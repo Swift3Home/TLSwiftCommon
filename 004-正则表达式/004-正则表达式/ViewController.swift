@@ -34,8 +34,16 @@ class ViewController: UIViewController {
         let string = "<a href=\"http://app.weibo.com/t/feed/6ghA0p\" rel=\"nofollow\">搜狗高速浏览器</a>"
         
         // 2. 创建正则表达式
-        // 0> pattern - 匹配方案
-        let pattern = "<a href=\"http://app.weibo.com/t/feed/6ghA0p\" rel=\"nofollow\">搜狗高速浏览器</a>"
+        // 0> pattern - 常说的正则表达式，就是 pattern 的写法[匹配方案]
+        // 索引：
+        // 0: 和匹配方案完全一致的字符串
+        // 1: 第一个 () 中的内容
+        // 2: 第二个 () 中的内容
+        // ... 索引从左向右顺序递增
+        // 
+        // 对模糊匹配：如果关心的内容，就使用 (.*?)，然后通过索引可以获取结果
+        //           如果不关心的内容，就是用 .*?，可以匹配任意的内容
+        let pattern = "<a href=\"(.*?)\".*?>(.*?)</a>"
         // 1> 创建正则表达式, 如果 pattern 失败，抛出异常
         guard let regx = try? NSRegularExpression(pattern: pattern, options: []) else {
             return
@@ -58,7 +66,7 @@ class ViewController: UIViewController {
             let r = result.rangeAt(idx)
             let subStr = (string as NSString).substring(with: r)
             
-            print(subStr)
+            print("\(idx) - \(subStr)")
         }
     }
 
