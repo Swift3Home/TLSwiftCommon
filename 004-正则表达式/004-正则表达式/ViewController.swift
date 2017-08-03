@@ -16,7 +16,9 @@ class ViewController: UIViewController {
         // 目标：去除字符串
         let string = "<a href=\"http://app.weibo.com/t/feed/6ghA0p\" rel=\"nofollow\">搜狗高速浏览器</a>"
         
-        string.tl_href()
+        let result = string.tl_href()
+        print(result?.text)
+        print(result?.link)
     }
 
     func demo() {
