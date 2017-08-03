@@ -14,7 +14,7 @@
 
 @end
 
-// 目标：我 [爱你]
+// 目标：我 [爱你]88!
 @implementation ViewController
 
 - (void)viewDidLoad {
