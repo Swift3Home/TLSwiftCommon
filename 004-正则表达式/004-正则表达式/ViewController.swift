@@ -12,23 +12,14 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        // 1. "<a href="http://app.weibo.com/t/feed/6ghA0p" rel="nofollow">搜狗高速浏览器</a>"
+        // 目标：去除字符串
+        let string = "<a href=\"http://app.weibo.com/t/feed/6ghA0p\" rel=\"nofollow\">搜狗高速浏览器</a>"
         
-//        let array = ["red": UIColor.red,
-//                     "green": UIColor.green,
-//                     "yellow": UIColor.yellow,
-//                     "blue": UIColor.blue,
-//                     "black": UIColor.black,
-//                     "brown": UIColor.brown,
-//                     "orange": UIColor.orange,
-//                     "white": UIColor.white,
-//                     "gray": UIColor.gray,
-//                     ]
-        
-        
-//        "(.*?)": UIColor\.(.*?),
-//        "$2": UIColor\.$2,
-        
-        
+        string.tl_href()
+    }
+
+    func demo() {
         // 1. "<a href="http://app.weibo.com/t/feed/6ghA0p" rel="nofollow">搜狗高速浏览器</a>"
         // 目标：去除字符串
         let string = "<a href=\"http://app.weibo.com/t/feed/6ghA0p\" rel=\"nofollow\">搜狗高速浏览器</a>"
@@ -40,7 +31,7 @@ class ViewController: UIViewController {
         // 1: 第一个 () 中的内容
         // 2: 第二个 () 中的内容
         // ... 索引从左向右顺序递增
-        // 
+        //
         // 对模糊匹配：如果关心的内容，就使用 (.*?)，然后通过索引可以获取结果
         //           如果不关心的内容，就是用 .*?，可以匹配任意的内容
         let pattern = "<a href=\"(.*?)\".*?>(.*?)</a>"
@@ -69,12 +60,5 @@ class ViewController: UIViewController {
             print("\(idx) - \(subStr)")
         }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 
