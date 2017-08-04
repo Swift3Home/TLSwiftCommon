@@ -13,6 +13,7 @@
 		7EBE7B6F1F33296D00BA8B4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EBE7B6E1F33296D00BA8B4B /* Assets.xcassets */; };
 		7EBE7B721F33296D00BA8B4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EBE7B701F33296D00BA8B4B /* LaunchScreen.storyboard */; };
 		7EBE7B831F332EA400BA8B4B /* Emoticons.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7EBE7B821F332EA400BA8B4B /* Emoticons.bundle */; };
+		7EBE7B851F341F1600BA8B4B /* TLEmotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBE7B841F341F1500BA8B4B /* TLEmotionManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		7EBE7B711F33296D00BA8B4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7EBE7B731F33296D00BA8B4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7EBE7B821F332EA400BA8B4B /* Emoticons.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Emoticons.bundle; sourceTree = "<group>"; };
+		7EBE7B841F341F1500BA8B4B /* TLEmotionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLEmotionManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				7EBE7B821F332EA400BA8B4B /* Emoticons.bundle */,
+				7EBE7B841F341F1500BA8B4B /* TLEmotionManager.swift */,
 			);
 			path = Emotion;
 			sourceTree = "<group>";
@@ -150,6 +153,7 @@
 			files = (
 				7EBE7B6A1F33296D00BA8B4B /* ViewController.swift in Sources */,
 				7EBE7B681F33296D00BA8B4B /* AppDelegate.swift in Sources */,
+				7EBE7B851F341F1600BA8B4B /* TLEmotionManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
