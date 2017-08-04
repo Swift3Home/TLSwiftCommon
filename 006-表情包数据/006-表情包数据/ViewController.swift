@@ -25,28 +25,10 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var label: UILabel!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
-//        let m1 = TLEmoticonManager.shared
-//        print(m1.packages)
-        
-//        let path = Bundle.main.path(forResource: "TLEmoticon.bundle", ofType: nil)
-//        let bundle = Bundle(path: path!)
-//        let image = UIImage(named: "lxh/lxh_toule.png", in: bundle, compatibleWith: nil)
-//        print(image)
-        // --- 测试表情图像 ---
-//        print(TLEmoticonManager.shared.packages.last?.emoticons.first?.image)
-//        print(TLEmoticonManager.shared.packages.last?.emoticons.first)
-        
-        // --- 测试查找表情 ---
-        print(TLEmoticonManager.shared.findEmoticon(string: "[马上有对象]"))
-        
-        // --- 测试直接生成表情属性文本 ---
-        let em = TLEmoticonManager.shared.findEmoticon(string: "[马上有对象]")
-        label.attributedText = em?.imageText(font: label.font)
+//        testEmoticons()
         
     }
 
@@ -55,6 +37,21 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    func testEmoticons() {
+        // --- 测试单例 ---
+        let m1 = TLEmoticonManager.shared
+        print(m1.packages)
+        
+        // --- 测试表情图像 ---
+        print(TLEmoticonManager.shared.packages.last?.emoticons.first?.image ?? "")
+        print(TLEmoticonManager.shared.packages.last?.emoticons.first ?? "")
+        
+        // --- 测试查找表情 ---
+        print(TLEmoticonManager.shared.findEmoticon(string: "[马上有对象]") ?? "")
+        
+        // --- 测试直接生成表情属性文本 ---
+        let em = TLEmoticonManager.shared.findEmoticon(string: "[马上有对象]")
+        label.attributedText = em?.imageText(font: label.font)
+    }
 }
 
