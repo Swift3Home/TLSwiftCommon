@@ -14,9 +14,14 @@
 		7EBE7B721F33296D00BA8B4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EBE7B701F33296D00BA8B4B /* LaunchScreen.storyboard */; };
 		7EBE7B851F341F1600BA8B4B /* TLEmoticonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBE7B841F341F1500BA8B4B /* TLEmoticonManager.swift */; };
 		7EBE7B871F34210C00BA8B4B /* TLEmoticon.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7EBE7B861F34210C00BA8B4B /* TLEmoticon.bundle */; };
+		7EBE7B8A1F344F0400BA8B4B /* TLEmoticon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBE7B891F344F0400BA8B4B /* TLEmoticon.swift */; };
+		7EBE7B8C1F3450A600BA8B4B /* TLEmoticonPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBE7B8B1F3450A600BA8B4B /* TLEmoticonPackage.swift */; };
+		E24F9AE77B7ED48794D43914 /* Pods_006______.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ACA52A99E10D3E955D79B38 /* Pods_006______.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F7F222E64A35477F6361F4F /* Pods-006-表情包数据.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-006-表情包数据.debug.xcconfig"; path = "Pods/Target Support Files/Pods-006-表情包数据/Pods-006-表情包数据.debug.xcconfig"; sourceTree = "<group>"; };
+		5ACA52A99E10D3E955D79B38 /* Pods_006______.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_006______.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EBE7B641F33296D00BA8B4B /* 006-表情包数据.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "006-表情包数据.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EBE7B671F33296D00BA8B4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7EBE7B691F33296D00BA8B4B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -26,6 +31,9 @@
 		7EBE7B731F33296D00BA8B4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7EBE7B841F341F1500BA8B4B /* TLEmoticonManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLEmoticonManager.swift; sourceTree = "<group>"; };
 		7EBE7B861F34210C00BA8B4B /* TLEmoticon.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TLEmoticon.bundle; sourceTree = "<group>"; };
+		7EBE7B891F344F0400BA8B4B /* TLEmoticon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLEmoticon.swift; sourceTree = "<group>"; };
+		7EBE7B8B1F3450A600BA8B4B /* TLEmoticonPackage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLEmoticonPackage.swift; sourceTree = "<group>"; };
+		8BB08D89AE332615F34D4727 /* Pods-006-表情包数据.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-006-表情包数据.release.xcconfig"; path = "Pods/Target Support Files/Pods-006-表情包数据/Pods-006-表情包数据.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +41,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E24F9AE77B7ED48794D43914 /* Pods_006______.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		495D238405A35B5C7379CC2F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0F7F222E64A35477F6361F4F /* Pods-006-表情包数据.debug.xcconfig */,
+				8BB08D89AE332615F34D4727 /* Pods-006-表情包数据.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		7EBE7B5B1F33296D00BA8B4B = {
 			isa = PBXGroup;
 			children = (
 				7EBE7B661F33296D00BA8B4B /* 006-表情包数据 */,
 				7EBE7B651F33296D00BA8B4B /* Products */,
+				495D238405A35B5C7379CC2F /* Pods */,
+				E52053495DA7817DCB897D85 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,10 +92,28 @@
 		7EBE7B791F3329C200BA8B4B /* Emotion */ = {
 			isa = PBXGroup;
 			children = (
+				7EBE7B881F344EB200BA8B4B /* Model */,
 				7EBE7B861F34210C00BA8B4B /* TLEmoticon.bundle */,
 				7EBE7B841F341F1500BA8B4B /* TLEmoticonManager.swift */,
 			);
 			path = Emotion;
+			sourceTree = "<group>";
+		};
+		7EBE7B881F344EB200BA8B4B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7EBE7B891F344F0400BA8B4B /* TLEmoticon.swift */,
+				7EBE7B8B1F3450A600BA8B4B /* TLEmoticonPackage.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E52053495DA7817DCB897D85 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5ACA52A99E10D3E955D79B38 /* Pods_006______.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,9 +123,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7EBE7B761F33296D00BA8B4B /* Build configuration list for PBXNativeTarget "006-表情包数据" */;
 			buildPhases = (
+				284953C7C1B06A9923C3EF83 /* [CP] Check Pods Manifest.lock */,
 				7EBE7B601F33296D00BA8B4B /* Sources */,
 				7EBE7B611F33296D00BA8B4B /* Frameworks */,
 				7EBE7B621F33296D00BA8B4B /* Resources */,
+				B15D1482266475A400FE585A /* [CP] Embed Pods Frameworks */,
+				9357C15836503F549F18C10A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -146,13 +187,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		284953C7C1B06A9923C3EF83 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9357C15836503F549F18C10A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-006-表情包数据/Pods-006-表情包数据-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B15D1482266475A400FE585A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-006-表情包数据/Pods-006-表情包数据-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7EBE7B601F33296D00BA8B4B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				7EBE7B6A1F33296D00BA8B4B /* ViewController.swift in Sources */,
+				7EBE7B8A1F344F0400BA8B4B /* TLEmoticon.swift in Sources */,
 				7EBE7B681F33296D00BA8B4B /* AppDelegate.swift in Sources */,
+				7EBE7B8C1F3450A600BA8B4B /* TLEmoticonPackage.swift in Sources */,
 				7EBE7B851F341F1600BA8B4B /* TLEmoticonManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,6 +367,7 @@
 		};
 		7EBE7B771F33296D00BA8B4B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F7F222E64A35477F6361F4F /* Pods-006-表情包数据.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "006-表情包数据/Info.plist";
@@ -288,6 +380,7 @@
 		};
 		7EBE7B781F33296D00BA8B4B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8BB08D89AE332615F34D4727 /* Pods-006-表情包数据.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "006-表情包数据/Info.plist";
