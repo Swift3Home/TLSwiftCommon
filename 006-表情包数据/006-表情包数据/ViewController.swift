@@ -30,6 +30,11 @@ class ViewController: UIViewController {
         
 //        testEmoticons()
         
+        // 目标：我[爱你]啊[笑哈哈]！
+        let string = "我[爱你]啊[笑哈哈]！"
+        
+        label.attributedText = emoticonsString(string: string)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,6 +42,32 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    /// 将给定的字符串转换成属性文本
+    ///
+    /// - Parameter string: 完整的字符串
+    /// - Returns: 属性文本
+    func emoticonsString(string: String) -> NSAttributedString {
+        
+        let attrString = NSAttributedString(string: string)
+        // 1.建立正则表达式，过滤所有的表情文字
+        let pattern = "\\[.*?\\]"
+        guard let regx =  try? NSRegularExpression(pattern: pattern, options: []) else {
+            return attrString
+        }
+        // 2. 匹配所有项
+        let matchs = regx.matches(in: string, options: [], range: NSRange(location: 0, length: attrString.length))
+        
+        // 3. 遍历所有匹配结果
+        for m in matchs {
+            
+            let r = m.rangeAt(0)
+            let subStr = (attrString.string as NSString).substring(with: r)
+            print(subStr)
+        }
+        
+        return attrString
+    }
+    
     func testEmoticons() {
         // --- 测试单例 ---
         let m1 = TLEmoticonManager.shared
