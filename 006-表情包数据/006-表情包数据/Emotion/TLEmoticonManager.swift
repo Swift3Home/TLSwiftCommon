@@ -15,6 +15,8 @@ class TLEmoticonManager {
     // 表情管理器的单例实例
     static let shared = TLEmoticonManager()
     
+    lazy var packages = [TLEmoticonPackage]()
+    
     /// 构造函数,如果在 init 之前增加 private 修饰符，可以要求调用者必须通过 shared 访问对象
     private init() {
         loadPackages()
@@ -30,12 +32,15 @@ private extension TLEmoticonManager {
         guard let path = Bundle.main.path(forResource: "TLEmoticon.bundle", ofType: nil),
             let bundle = Bundle(path: path),
             let plistPath = bundle.path(forResource: "emoticons.plist", ofType: nil),
-            let array = NSArray(contentsOfFile: plistPath) as? [String: String]
+            let array = NSArray(contentsOfFile: plistPath) as? [[String: String]],
+            let models = NSArray.yy_modelArray(with: TLEmoticonPackage.self, json: array) as? [TLEmoticonPackage]
             else {
                 return
         }
+        // 设置表情包数据
+        packages += models
         
-        print(array)
+        print(packages)
     }
     
 }
