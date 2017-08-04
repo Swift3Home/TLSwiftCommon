@@ -26,6 +26,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        let m1 = TLEmoticonManager.shared
+        print(m1)
+        
     }
 
     override func didReceiveMemoryWarning() {
