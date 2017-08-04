@@ -30,6 +30,13 @@ class ViewController: UIViewController {
         let m1 = TLEmoticonManager.shared
         print(m1.packages)
         
+//        let path = Bundle.main.path(forResource: "TLEmoticon.bundle", ofType: nil)
+//        let bundle = Bundle(path: path!)
+//        let image = UIImage(named: "lxh/lxh_toule.png", in: bundle, compatibleWith: nil)
+//        print(image)
+        
+        print(TLEmoticonManager.shared.packages.last?.emoticons.first?.image)
+        print(TLEmoticonManager.shared.packages.last?.emoticons.first)
     }
 
     override func didReceiveMemoryWarning() {

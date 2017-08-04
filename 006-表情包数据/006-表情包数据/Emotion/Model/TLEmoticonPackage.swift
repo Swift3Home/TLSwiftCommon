@@ -28,6 +28,11 @@ class TLEmoticonPackage: NSObject {
                 return
             }
             
+            // 遍历 models 数组，设置每一个表情符号的目录
+            for m in models {
+                m.directory = directory
+            }
+            
             // 设置表情模型数组
             emoticons += models
         }
