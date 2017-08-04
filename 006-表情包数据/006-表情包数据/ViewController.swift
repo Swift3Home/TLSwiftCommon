@@ -27,16 +27,19 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let m1 = TLEmoticonManager.shared
-        print(m1.packages)
+//        let m1 = TLEmoticonManager.shared
+//        print(m1.packages)
         
 //        let path = Bundle.main.path(forResource: "TLEmoticon.bundle", ofType: nil)
 //        let bundle = Bundle(path: path!)
 //        let image = UIImage(named: "lxh/lxh_toule.png", in: bundle, compatibleWith: nil)
 //        print(image)
+        // --- 测试表情图像 ---
+//        print(TLEmoticonManager.shared.packages.last?.emoticons.first?.image)
+//        print(TLEmoticonManager.shared.packages.last?.emoticons.first)
         
-        print(TLEmoticonManager.shared.packages.last?.emoticons.first?.image)
-        print(TLEmoticonManager.shared.packages.last?.emoticons.first)
+        // --- 测试查找表情 ---
+        print(TLEmoticonManager.shared.findEmoticon(string: "[爱你]"))
     }
 
     override func didReceiveMemoryWarning() {

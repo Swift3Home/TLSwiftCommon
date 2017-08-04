@@ -92,9 +92,9 @@
 		7EBE7B791F3329C200BA8B4B /* Emotion */ = {
 			isa = PBXGroup;
 			children = (
+				7EBE7B841F341F1500BA8B4B /* TLEmoticonManager.swift */,
 				7EBE7B881F344EB200BA8B4B /* Model */,
 				7EBE7B861F34210C00BA8B4B /* TLEmoticon.bundle */,
-				7EBE7B841F341F1500BA8B4B /* TLEmoticonManager.swift */,
 			);
 			path = Emotion;
 			sourceTree = "<group>";

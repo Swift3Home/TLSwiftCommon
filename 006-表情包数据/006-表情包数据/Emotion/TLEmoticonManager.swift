@@ -23,8 +23,32 @@ class TLEmoticonManager {
     }
 }
 
-// MARK: - 表情包数据处理
+// MARK: - 表情符号处理
+extension TLEmoticonManager {
+    
+    /// 根据 string 在所有的表情符号中查找对应的表情模型对象
+    ///
+    /// - Parameter string: 表情模型字符串
+    /// - Returns: 如果找到，返回表情模型；否则，返回nil
+    func findEmoticon(string: String) -> TLEmoticon? {
+        // 1. 遍历表情包
+        for p in packages {
+            // 2. 在表情数组中过滤 string
+            let result = p.emoticons.filter({ (em) -> Bool in
+                return em.chs == string
+            })
+            
+            // 3. 判断结果数组的数量
+            if result.count == 1 {
+                return result[0]
+            }
+        }
+        
+        return nil
+    }
+}
 
+// MARK: - 表情包数据处理
 private extension TLEmoticonManager {
     
     func loadPackages() {
