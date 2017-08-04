@@ -14,6 +14,7 @@
 		7EBE7B721F33296D00BA8B4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EBE7B701F33296D00BA8B4B /* LaunchScreen.storyboard */; };
 		7EBE7B831F332EA400BA8B4B /* Emoticons.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7EBE7B821F332EA400BA8B4B /* Emoticons.bundle */; };
 		7EBE7B851F341F1600BA8B4B /* TLEmotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBE7B841F341F1500BA8B4B /* TLEmotionManager.swift */; };
+		7EBE7B871F34210C00BA8B4B /* TLEmoticon.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7EBE7B861F34210C00BA8B4B /* TLEmoticon.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		7EBE7B731F33296D00BA8B4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7EBE7B821F332EA400BA8B4B /* Emoticons.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Emoticons.bundle; sourceTree = "<group>"; };
 		7EBE7B841F341F1500BA8B4B /* TLEmotionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLEmotionManager.swift; sourceTree = "<group>"; };
+		7EBE7B861F34210C00BA8B4B /* TLEmoticon.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TLEmoticon.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 		7EBE7B791F3329C200BA8B4B /* Emotion */ = {
 			isa = PBXGroup;
 			children = (
+				7EBE7B861F34210C00BA8B4B /* TLEmoticon.bundle */,
 				7EBE7B821F332EA400BA8B4B /* Emoticons.bundle */,
 				7EBE7B841F341F1500BA8B4B /* TLEmotionManager.swift */,
 			);
@@ -139,6 +142,7 @@
 			files = (
 				7EBE7B721F33296D00BA8B4B /* LaunchScreen.storyboard in Resources */,
 				7EBE7B831F332EA400BA8B4B /* Emoticons.bundle in Resources */,
+				7EBE7B871F34210C00BA8B4B /* TLEmoticon.bundle in Resources */,
 				7EBE7B6F1F33296D00BA8B4B /* Assets.xcassets in Resources */,
 				7EBE7B6D1F33296D00BA8B4B /* Main.storyboard in Resources */,
 			);
@@ -317,6 +321,7 @@
 				7EBE7B781F33296D00BA8B4B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
