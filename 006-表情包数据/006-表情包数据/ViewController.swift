@@ -31,49 +31,15 @@ class ViewController: UIViewController {
 //        testEmoticons()
         
         // 目标：我[爱你]啊[笑哈哈]！
-        let string = "我[爱你]啊[笑哈哈]！"
+        let string = "我[爱你]啊[笑哈哈]，[马上有对象]！"
         
-        label.attributedText = emoticonsString(string: string)
+        label.attributedText = TLEmoticonManager.shared.emoticonsString(string: string, font: label.font)
         
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-
-    /// 将给定的字符串转换成属性文本
-    ///
-    /// 关键点：要按照匹配结果倒序替换属性文本
-    ///
-    /// - Parameter string: 完整的字符串
-    /// - Returns: 属性文本
-    func emoticonsString(string: String) -> NSAttributedString {
-        
-        let attrString = NSMutableAttributedString(string: string)
-        // 1.建立正则表达式，过滤所有的表情文字
-        let pattern = "\\[.*?\\]"
-        guard let regx =  try? NSRegularExpression(pattern: pattern, options: []) else {
-            return attrString
-        }
-        // 2. 匹配所有项
-        let matchs = regx.matches(in: string, options: [], range: NSRange(location: 0, length: attrString.length))
-        
-        // 3. 遍历所有匹配结果
-        for m in matchs.reversed() {
-            
-            let r = m.rangeAt(0)
-            let subStr = (attrString.string as NSString).substring(with: r)
-            
-            // 1> 使用 subStr 查找对应的表情符号
-            if let em = TLEmoticonManager.shared.findEmoticon(string: subStr) {
-                
-                // 2> 使用表情符号中的属性文本，替换原有的属性文本的内容
-                attrString.replaceCharacters(in: r, with: em.imageText(font: label.font))
-            }
-        }
-        
-        return attrString
     }
     
     func testEmoticons() {
