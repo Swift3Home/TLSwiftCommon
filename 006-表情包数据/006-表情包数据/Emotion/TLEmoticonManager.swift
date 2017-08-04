@@ -34,9 +34,25 @@ extension TLEmoticonManager {
         // 1. 遍历表情包
         for p in packages {
             // 2. 在表情数组中过滤 string
-            let result = p.emoticons.filter({ (em) -> Bool in
-                return em.chs == string
-            })
+            // 方法一：
+//            let result = p.emoticons.filter({ (em) -> Bool in
+//                return em.chs == string
+//            })
+            // 方法二：尾随闭包
+//            let result = p.emoticons.filter() { (em) -> Bool in
+//                return em.chs == string
+//            }
+            // 方法三：如果闭包中只有一句，并且是返回
+            // 1> 闭包格式定义可以省略
+            // 2> 参数省略之后，使用 $0,$1... 依次替代原有的参数
+//            let result = p.emoticons.filter() {
+//                return $0.chs == string
+//            }
+            // 方法四：如果闭包中只有一句，并且是返回
+            // 1> 闭包格式定义可以省略
+            // 2> 参数省略之后，使用 $0,$1... 依次替代原有的参数
+            // 3> return 也可以省略
+            let result = p.emoticons.filter() { $0.chs == string }
             
             // 3. 判断结果数组的数量
             if result.count == 1 {

@@ -39,7 +39,7 @@ class ViewController: UIViewController {
 //        print(TLEmoticonManager.shared.packages.last?.emoticons.first)
         
         // --- 测试查找表情 ---
-        print(TLEmoticonManager.shared.findEmoticon(string: "[爱你]"))
+        print(TLEmoticonManager.shared.findEmoticon(string: "[马上有对象]"))
     }
 
     override func didReceiveMemoryWarning() {
