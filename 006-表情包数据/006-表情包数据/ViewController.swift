@@ -28,7 +28,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         let m1 = TLEmoticonManager.shared
-        print(m1)
+        print(m1.packages)
         
     }
 

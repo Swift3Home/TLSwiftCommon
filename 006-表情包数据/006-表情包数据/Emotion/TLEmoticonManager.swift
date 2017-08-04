@@ -39,8 +39,6 @@ private extension TLEmoticonManager {
         }
         // 设置表情包数据
         packages += models
-        
-        print(packages)
     }
     
 }
