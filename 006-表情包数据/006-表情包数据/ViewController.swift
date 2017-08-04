@@ -23,6 +23,9 @@ import UIKit
  */
 class ViewController: UIViewController {
 
+    @IBOutlet weak var label: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -40,6 +43,11 @@ class ViewController: UIViewController {
         
         // --- 测试查找表情 ---
         print(TLEmoticonManager.shared.findEmoticon(string: "[马上有对象]"))
+        
+        // --- 测试直接生成表情属性文本 ---
+        let em = TLEmoticonManager.shared.findEmoticon(string: "[马上有对象]")
+        label.attributedText = em?.imageText(font: label.font)
+        
     }
 
     override func didReceiveMemoryWarning() {
