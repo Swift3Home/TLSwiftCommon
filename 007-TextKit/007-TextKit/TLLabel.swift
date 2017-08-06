@@ -10,8 +10,10 @@ import UIKit
 
 /**
  1. 使用 TextKit 接管 Label 的底层实现 - 绘制 textStorage 的文本内容
- 2. 使用正则表达式过滤 URL
+ 2. 使用正则表达式过滤 URL，设置 URL 的特殊显示
  3. 交互
+ 
+ - UILabel 默认不能实现垂直顶部对齐，使用 TextKit 可以
  */
 class TLLabel: UILabel {
 
@@ -31,7 +33,10 @@ class TLLabel: UILabel {
     /// 绘制文本
     override func drawText(in rect: CGRect) {
         let range = NSRange(location: 0, length: textStorage.length)
+        // 绘制背景
+        layoutManager.drawBackground(forGlyphRange: range, at: CGPoint())
         
+        // 绘制 Glyphs 字形
         layoutManager.drawGlyphs(forGlyphRange: range, at: CGPoint())
     }
     
@@ -76,7 +81,16 @@ private extension TLLabel {
             textStorage.setAttributedString(NSAttributedString(string: ""))
         }
         
-        print(urlRanges)
+        // 遍历范围数组，设置url的文字的属性
+        for r in urlRanges ?? [] {
+            textStorage.addAttributes(
+                [
+                    NSForegroundColorAttributeName:UIColor.red,
+                    NSBackgroundColorAttributeName: UIColor.init(white: 0.9, alpha: 1.0)
+                ], range: r)
+            
+        }
+        
     }
 }
 
