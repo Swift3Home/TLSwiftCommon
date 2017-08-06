@@ -9,9 +9,11 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var label: TLLabel!
 
     @IBOutlet weak var tableView: UITableView!
     lazy var refreshControl: TLRefreshControl = TLRefreshControl()
+    @IBOutlet weak var label: TLLabel!
     
     /**
      系统刷新控件的问题：

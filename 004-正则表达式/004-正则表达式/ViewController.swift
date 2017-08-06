@@ -14,6 +14,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // 1. "<a href="http://app.weibo.com/t/feed/6ghA0p" rel="nofollow">搜狗高速浏览器</a>"
         // 目标：去除字符串
+        @IBOutlet weak var label: TLLabel!
         let string = "<a href=\"http://app.weibo.com/t/feed/6ghA0p\" rel=\"nofollow\">搜狗高速浏览器</a>"
         
         let result = string.tl_href()

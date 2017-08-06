@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:007-TextKit/007-TextKit.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:006-&#x8868;&#x60c5;&#x5305;&#x6570;&#x636e;/006-&#x8868;&#x60c5;&#x5305;&#x6570;&#x636e;.xcodeproj">
    </FileRef>
    <FileRef
