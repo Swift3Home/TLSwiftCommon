@@ -30,7 +30,38 @@ class TLLabel: UILabel {
         prepareTextSystem()
     }
     
+    // MARK: - 交互
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        // 1. 获取用户点击的位置
+        guard let location = touches.first?.location(in: self) else {
+            return
+        }
+        
+        // 2. 获取当前点中字符的索引
+        let idx = layoutManager.glyphIndex(for: location, in: textContainer)
+        print("点我了 \(idx)")
+        
+        // 3. 判断 idx 是否在 urls 的 ranges 范围内，如果在，就高亮
+        for r in urlRanges ?? [] {
+            // NSRange 跳入文件可见此方法
+            if NSLocationInRange(idx, r) {
+                print("需要高亮")
+                
+                textStorage.addAttributes([NSForegroundColorAttributeName: UIColor.blue], range: r)
+                
+                // 如果需要重绘，需要调用 setNeedsDisplay 函数，但是不是 drawRect
+                setNeedsDisplay()
+            } else {
+                print("没戳着")
+            }
+        }
+    }
+    
     /// 绘制文本
+    /**
+     - 在 iOS 中绘制工作时类似于`油画`似的，后绘制的内容，会把之前绘制的内容覆盖
+     - 尽量避免使用带透明度的颜色，会严重影响性能
+     */
     override func drawText(in rect: CGRect) {
         let range = NSRange(location: 0, length: textStorage.length)
         // 绘制背景
@@ -62,6 +93,10 @@ private extension TLLabel {
     
     // 准备文本系统
     func prepareTextSystem() {
+        
+        // 0. 开启用户交互
+        isUserInteractionEnabled = true
+        
         // 1. 准备文本内容
         prepareTextContent()
         
