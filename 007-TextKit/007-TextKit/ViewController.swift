@@ -14,7 +14,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        label.text = "请点 http://www.baidu.com"
     }
 
     override func didReceiveMemoryWarning() {
